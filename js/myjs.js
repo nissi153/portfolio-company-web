@@ -48,12 +48,12 @@
 
           $('link').each(function() {
             // http://127.0.0.1:5501/css/main.css
-            console.log( this.href );
+            console.log( 'href:'+this.href );
             // 127.0.0.1:5501
-            console.log( window.location.host );
+            console.log( 'host:'+window.location.host );
             // /index.html
             // /member/join.html
-            console.log( window.location.pathname );
+            console.log( 'pathname:'+window.location.pathname );
             
             if( this.href == '#' ||
                 this.href.includes('http') ||
@@ -64,7 +64,7 @@
             var href = this.href + '';
             var arrayStr = href.split(window.location.host);
             var orgHref = arrayStr[1];
-            console.log( orgHref );
+            console.log( 'orgHref:'+orgHref );
 
             let pathname = window.location.pathname;
             if( pathname.includes('/member') ||
@@ -77,7 +77,7 @@
             }else{
               this.href = '.' + orgHref;
             }
-            console.log( this.href );
+            console.log( 'href:'+this.href );
           });
 
         }, 
