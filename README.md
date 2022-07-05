@@ -1,5 +1,6 @@
 ### portfolio-company-web
 
+### 상대경로 잡기
 
 <!-- index.html -->
 <!-- .  : 루트 / -->
