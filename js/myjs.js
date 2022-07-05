@@ -3,6 +3,12 @@
           $('img').each(function() {
             // http://127.0.0.1:5501/img/mf-icon01.png
             //console.log( this.src );
+            if( this.src == '#' ||
+                (this.src.includes('http') && !this.src.includes('github.io')) ||
+                this.src.includes('cdn')  ){
+              //넘어간다.
+              return;
+            }
             var src = this.src + '';
             var arrayStr = src.split('/img/');
             var orgSrc = '/img/'+arrayStr[1];
@@ -19,7 +25,7 @@
             // /member/join.html
             //console.log( window.location.pathname );
             if( this.href == '#' ||
-                this.href.includes('http') ||
+                (this.href.includes('http') && !this.href.includes('github.io')) ||
                 this.href.includes('cdn')  ){
               //넘어간다.
               return;
@@ -29,13 +35,7 @@
             var orgHref = arrayStr[1];
             //console.log( orgHref );
             let pathname = window.location.pathname;
-            if( this.href == '#' ||
-                (this.href.includes('http') && !this.href.includes('github.io')) ||
-                this.href.includes('cdn')  ){
-              //넘어간다.
-              return;
-            }
-            else if( pathname.includes('/member') ||
+            if( pathname.includes('/member') ||
                 pathname.includes('/company') ||
                 pathname.includes('/business') ||
                 pathname.includes('/product')  ||
