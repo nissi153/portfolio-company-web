@@ -14,7 +14,7 @@
 <!-- index.html => header.html headerTop.html main.html footer.html -->
 <!-- ./ 를 이용 -->
 
-<!-- 그외의 폴더 : member company -->
+<!-- 그외의 폴더 : member company business product community -->
 <!-- login.html join.htm : header-sub.html headerTop-sub.html footer-sub.html -->
 <!-- ../ 을 이용 -->
 
