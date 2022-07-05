@@ -29,9 +29,11 @@
             var orgHref = arrayStr[1];
             //console.log( orgHref );
             let pathname = window.location.pathname;
-            if( pathname == '#' ||
-                pathname.includes('http')  ){
+            if( this.href == '#' ||
+                (this.href.includes('http') && !this.href.includes('github.io')) ||
+                this.href.includes('cdn')  ){
               //넘어간다.
+              return;
             }
             else if( pathname.includes('/member') ||
                 pathname.includes('/company') ||
@@ -56,7 +58,7 @@
             console.log( 'pathname:'+window.location.pathname );
             
             if( this.href == '#' ||
-                this.href.includes('http') ||
+                (this.href.includes('http') && !this.href.includes('github.io')) ||
                 this.href.includes('cdn')  ){
               //넘어간다.
               return;
