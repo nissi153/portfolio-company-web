@@ -3,6 +3,8 @@
 자바 백엔드 개발자로 취업하기 위한 포폴 제작
 전형적인 회사 홈페이지 만들기
 
+![캡처](https://user-images.githubusercontent.com/36612384/177496819-496bec16-7223-42e7-a72f-8086cfde9450.PNG)
+
 프론트엔드
 - HTML5/CSS3/JS
 - flexgrid
